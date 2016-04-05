@@ -19,6 +19,11 @@ var race = function(name, minStr, maxStr, minDex, maxDex, minCon, maxCon, minInt
 
 var human = new race('Human', 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18)
 var elf = new race('Elf', 3, 18, 7, 19, 6, 17, 8, 18, 3, 18, 8, 18)
+var halfelf = new race('Half-Elf', 3, 18, 6, 18, 6, 18, 4, 18, 3, 18, 3, 18)
+var gnome = new race('Gnome', 6, 18, 3, 18, 8, 18, 7, 19, 2, 17, 3, 18)
+var halfling = new race("Halfling", 6, 17, 8, 19, 10, 18, 6, 18, 3, 17, 3, 18)
+var dwarf = new race('Dwarf', 8, 18, 3, 17, 12, 19, 3, 18, 3, 18, 2, 16)
+var orc = new race('Orc', 4, 19, 3, 18, 4, 19, 1, 16, 3, 18, 3, 18)
 
 
 var character = {}
@@ -27,24 +32,28 @@ var generateStats = function() {
 
 	var total = 0;
 
+	var roll3d6 = function() {
+		return (Math.floor(Math.random()*6 + 1) + Math.floor(Math.random()*6 + 1) + Math.floor(Math.random()*6 + 1))
+	}
+
 	while (total < 75) {
 
-		character.str = (Math.floor(Math.random()*6 + 1) + Math.floor(Math.random()*6 + 1) + Math.floor(Math.random()*6 + 1))
+		character.str = roll3d6()
 		$("#str").text( character.str )
 
-		character.dex = (Math.floor(Math.random()*6 + 1) + Math.floor(Math.random()*6 + 1) + Math.floor(Math.random()*6 + 1))
+		character.dex = roll3d6()
 		$("#dex").text( character.dex )
 
-		character.con = (Math.floor(Math.random()*6 + 1) + Math.floor(Math.random()*6 + 1) + Math.floor(Math.random()*6 + 1))
+		character.con = roll3d6()
 		$("#con").text( character.con )
 
-		character.int = (Math.floor(Math.random()*6 + 1) + Math.floor(Math.random()*6 + 1) + Math.floor(Math.random()*6 + 1))
+		character.int = roll3d6()
 		$("#int").text( character.int )
 
-		character.wis = (Math.floor(Math.random()*6 + 1) + Math.floor(Math.random()*6 + 1) + Math.floor(Math.random()*6 + 1))
+		character.wis = roll3d6()
 		$("#wis").text( character.wis )
 
-		character.cha = (Math.floor(Math.random()*6 + 1) + Math.floor(Math.random()*6 + 1) + Math.floor(Math.random()*6 + 1))
+		character.cha = roll3d6()
 		$("#cha").text( character.cha )
 
 		total = parseInt(character.str + character.dex + character.con + character.int + character.wis + character.cha);
