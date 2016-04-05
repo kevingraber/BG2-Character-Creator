@@ -3,27 +3,61 @@
 <head>
 	<title>Baldur's Gate 2 Character Creator</title>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
 
-	<div>
+<div class="container">
+
+	<div class="jumbotron">
 		<h1>Baldur's Gate 2 Character Creator!</h1>
 	</div>
 
-	<div>
-		<h2>Choose a Gender</h2>
+	<div class="row">
+
+		<div class="col-md-6">
+			<h2>Choose a Gender</h2>
+			<form>
+				<input type="radio" name="gender" value="Male">Male<br>
+				<input type="radio" name="gender" value="Female">Female<br>
+			</form>
+		</div>
+
+		<div class="col-md-6">
+			<p>Gender: <span id="genderDisplay"></span></p>
+			<p>Race: <span id="raceDisplay"></span></p>
+		</div>
+
 	</div>
 
 	<div>
 		<h2>Choose a Race</h2>
+		<select id="chooseRace" name="race">
+			<option>Human</option>
+			<option>Elf</option>
+			<option>Half-Elf</option>
+			<option>Gnome</option>
+			<option>Halfling</option>
+			<option>Dwarf</option>
+			<option>Half-Orc</option>
+		</select>
+	</div>
+
+	<div>
+		<h2>Choose a Class</h2>
 		<form>
-			<input type="radio" name="race" value="Human">Human<br>
-			<input type="radio" name="race" value="Elf">Elf<br>
-			<input type="radio" name="race" value="Half-Elf">Half-Elf<br>
-			<input type="radio" name="race" value="Gnome">Gnome<br>
-			<input type="radio" name="race" value="Halfling">Halfling<br>
-			<input type="radio" name="race" value="Dwarf">Dwarf<br>
-			<input type="radio" name="race" value="Half-Orc">Half-Orc<br>
+			<input type="radio" name="race" value="Fighter" disabled>Fighter<br>
+			<input type="radio" name="race" value="Ranger" disabled>Ranger<br>
+			<input type="radio" name="race" value="Paladin" disabled>Paladin<br>
+			<input type="radio" name="race" value="Cleric" disabled>Cleric<br>
+			<input type="radio" name="race" value="Druid" disabled>Druid<br>
+			<input type="radio" name="race" value="Mage" disabled>Mage<br>
+			<input type="radio" name="race" value="Thief" disabled>Thief<br>
+			<input type="radio" name="race" value="Bard" disabled>Bard<br>
+			<input type="radio" name="race" value="Sorcerer" disabled>Sorcerer<br>
+			<input type="radio" name="race" value="Shaman" disabled>Shaman<br>
+			<input type="radio" name="race" value="Monk" disabled>Monk<br>
 		</form>
 	</div>
 
@@ -57,6 +91,7 @@
 		<button id="reRoll">Reroll Stats</button>
 	</div>
 
+</div>
 
 <script type="text/javascript" src="bg2.js"></script>
 </body>
