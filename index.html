@@ -25,8 +25,10 @@
 		</div>
 
 		<div class="col-md-6">
+			<h2>Character</h2>
 			<p>Gender: <span id="genderDisplay"></span></p>
 			<p>Race: <span id="raceDisplay"></span></p>
+			<p>Class: <span id="classDisplay"></span></p>
 		</div>
 
 	</div>
@@ -47,17 +49,17 @@
 	<div>
 		<h2>Choose a Class</h2>
 		<form>
-			<input type="radio" name="race" value="Fighter" disabled>Fighter<br>
-			<input type="radio" name="race" value="Ranger" disabled>Ranger<br>
-			<input type="radio" name="race" value="Paladin" disabled>Paladin<br>
-			<input type="radio" name="race" value="Cleric" disabled>Cleric<br>
-			<input type="radio" name="race" value="Druid" disabled>Druid<br>
-			<input type="radio" name="race" value="Mage" disabled>Mage<br>
-			<input type="radio" name="race" value="Thief" disabled>Thief<br>
-			<input type="radio" name="race" value="Bard" disabled>Bard<br>
-			<input type="radio" name="race" value="Sorcerer" disabled>Sorcerer<br>
-			<input type="radio" name="race" value="Shaman" disabled>Shaman<br>
-			<input type="radio" name="race" value="Monk" disabled>Monk<br>
+			<input type="radio" name="class" value="fighterTest">fighterTest<br>
+			<input type="radio" name="class" value="Ranger" disabled>Ranger<br>
+			<input type="radio" name="class" value="Paladin" disabled>Paladin<br>
+			<input type="radio" name="class" value="Cleric" disabled>Cleric<br>
+			<input type="radio" name="class" value="Druid" disabled>Druid<br>
+			<input type="radio" name="class" value="Mage" disabled>Mage<br>
+			<input type="radio" name="class" value="Thief" disabled>Thief<br>
+			<input type="radio" name="class" value="Bard" disabled>Bard<br>
+			<input type="radio" name="class" value="Sorcerer" disabled>Sorcerer<br>
+			<input type="radio" name="class" value="Shaman" disabled>Shaman<br>
+			<input type="radio" name="class" value="Monk" disabled>Monk<br>
 		</form>
 	</div>
 
@@ -65,30 +67,32 @@
 		<h2>Choose Your Stats</h2>
 	</div>
 	<div>
-		Strength: <span id="str"></span>
+		<button id="strup">+</button><button id="str-">-</button> Strength: <span id="str"></span>
 	</div>
 	<div>
-		Dexterity: <span id="dex"></span>
+		<button id="dexup">+</button><button id="dex-">-</button> Dexterity: <span id="dex"></span>
 	</div>
 	<div>
-		Constitution: <span id="con"></span>
+		<button id="conup">+</button><button id="con-">-</button> Constitution: <span id="con"></span>
 	</div>
 	<div>
-		Intelligence: <span id="int"></span>
+		<button id="intup">+</button><button id="int-">-</button> Intelligence: <span id="int"></span>
 	</div>
 	<div>
-		Wisdom: <span id="wis"></span>
+		<button id="wisup">+</button><button id="wis-">-</button> Wisdom: <span id="wis"></span>
 	</div>
 	<div>
-		Charisma: <span id="cha"></span>
+		<button id="chaup">+</button><button id="cha-">-</button> Charisma: <span id="cha"></span>
 	</div>
 	<div>
 		<br>
 		Total Stats: <span id="total"></span>
+		<br>
+		Points Remaining: <span id="remaining"></span>
 	</div>
 	<div>
 	<br>
-		<button id="reRoll">Reroll Stats</button>
+		<button id="reRoll">Roll Stats</button>
 	</div>
 
 </div>
